@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up for a Class{% endblock %}
+
+{% block content %}
+<style>
+    .container * {
+        color: white !important;
+    }
+
+    .container .form-control {
+        background-color: #343a40 !important;
+        border-color: lightgray !important;
+    }
+
+    .container select option {
+        color: black !important;
+        background-color: white !important;
+    }
+
+    /* Change the success message color to #10A1E9 */
+    .alert-success {
+        background-color: #343a40 !important;
+        border-color: #10A1E9 !important;
+        color: #10A1E9 !important;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="text-center">Sign Up for a Class</h1>
+
+    {% if success_message %}
+    <div class="alert alert-success text-center" role="alert">
+        {{ success_message }}
+    </div>
+    {% endif %}
+
+    <form method="POST" class="mt-5">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="classCategory">Class Category</label>
+            <select class="form-control" id="classCategory" name="classCategory" required>
+                <option value="">Select a category</option>
+                <option>Adult Classes</option>
+                <option>Personal Training</option>
+                <option>High School</option>
+                <option>College</option>
+                <option>Middle School</option>
+            </select>
+        </div>
+        <div class="form-group mt-3">
+            <label for="preferredDate">Preferred Date</label>
+            <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="trainer">Trainer</label>
+            <select class="form-control" id="trainer" name="trainer" required>
+                <option value="">Select a trainer</option>
+                <option>Trainer A</option>
+                <option>Trainer B</option>
+                <option>Trainer C</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Sign Up</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends "base.html" %}
+    <title>{% block title %}Pricing Page{% endblock %}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            color: white;
+            background-color: #343a40; /* Dark background for contrast */
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            color: #343a40; /* Dark color for header text */
+            font-size: 1.5rem;
+        }
+        .card-body {
+            border: 1px solid #dee2e6;
+            background-color: #495057; /* Darker background for card body */
+            color: white;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white; /* Button text color */
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+        .card-title {
+            color: #f8f9fa; /* Light color for card titles */
+        }
+        .text-muted {
+            color: #6c757d; /* Muted text color */
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-sm-12 col-md-4" style="color: white;">
+                <div class="card shadow mb-3 rounded-0">
+                    <h4 class="card-header text-center">Adult Classes</h4>
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">$200 <span class="text-muted" style="color: white;">/ month</span></h3>
+                        <div class="pricing-features d-flex justify-content-center">
+                            <div class="w-100">
+                                <p>Includes access to all adult group classes.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-block rounded-0 shadow">Sign up now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4" style="color: white;">
+                <div class="card shadow mb-3 rounded-0">
+                    <h4 class="card-header text-center">Personal Training</h4>
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">$500 <span class="text-muted" style="color: white;">/ month</span></h3>
+                        <div class="pricing-features d-flex justify-content-center">
+                            <div class="w-100">
+                                <p>Includes 4 one-on-one personal training sessions.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-block rounded-0 shadow">Sign up now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4" style="color: white;">
+                <div class="card shadow mb-3 rounded-0">
+                    <h4 class="card-header text-center">High School Classes</h4>
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">$150 <span class="text-muted" style="color: white;">/ month</span></h3>
+                        <div class="pricing-features d-flex justify-content-center">
+                            <div class="w-100">
+                                <p>Includes access to all high school group classes.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-block rounded-0 shadow">Sign up now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4" style="color: white;">
+                <div class="card shadow mb-3 rounded-0">
+                    <h4 class="card-header text-center">College Classes</h4>
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">$180 <span class="text-muted" style="color: white;">/ month</span></h3>
+                        <div class="pricing-features d-flex justify-content-center">
+                            <div class="w-100">
+                                <p>Includes access to all college group classes.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-block rounded-0 shadow">Sign up now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4" style="color: white;">
+                <div class="card shadow mb-3 rounded-0">
+                    <h4 class="card-header text-center">Middle School Classes</h4>
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">$130 <span class="text-muted" style="color: white;">/ month</span></h3>
+                        <div class="pricing-features d-flex justify-content-center">
+                            <div class="w-100">
+                                <p>Includes access to all middle school group classes.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-block rounded-0 shadow">Sign up now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

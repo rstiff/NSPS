@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-8 offset-sm-2 text-left">
+            <div class="about-box">
+                <h1 class="text-white">About Us</h1>
+                <p class="text-white">
+                    Welcome to Never Satisfied Performance (NSP)! Our mission is to provide top-notch training programs designed to help you achieve your fitness goals. Whether you're a seasoned athlete or just starting your fitness journey, we're here to support you every step of the way.
+                </p>
+                
+                <div class="trainers">
+                    <div class="trainer-circle" style="background-image: url('/static/images/1682182-200.png');">
+
+                    </div>
+                    <div class="trainer-circle" style="background-image: url('/static/images/1682182-200.png');">
+                       
+                    </div>
+                    <div class="trainer-circle" style="background-image: url('/static/images/1682182-200.png');">
+                       
+                    </div>
+                </div>
+                
+                <!-- Add more content as needed -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+  .text-white {
+      color: white;
+  }
+  .about-box {
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+      color: white;
+      border-radius: 15px; /* Rounded corners */
+      padding: 30px; /* Add padding for content */
+      margin-top: 50px; /* Space above the box */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Smoky effect */
+      backdrop-filter: blur(10px); /* Smoky effect */
+  }
+  .trainers {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+  }
+  .trainer-circle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white; /* White background for the photo */
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      color: white;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Smoky effect */
+  }
+  .trainer-name {
+      margin: 0;
+  }
+</style>
+
+{% endblock %}

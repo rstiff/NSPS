@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: url('/static/images/cropped_NSP_Front_Page.jpg') no-repeat top center fixed;
+            background-size: cover;
+            /* Add a semi-transparent overlay */
+            background-color: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+        }
+
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1; /* This makes sure content takes up the remaining space */
+        }
+
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Navbar link styles */
+        .navbar-inverse .navbar-nav > li > a {
+            color: #10A1E9; /* Set link color to blue */
+        }
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            color: #007bff; /* Optional: set a hover color */
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #10A1E9; /* Set brand color to blue */
+        }
+
+        .navbar-inverse .navbar-brand:hover {
+            color: #007bff; /* Optional: set a hover color for the brand */
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/laction">Located</a></li>
+                    <li><a href="/signupforclass">Sign Up for Classes</a></li>
+                    <li><a href="/packages">Packeges</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <!-- Main content block -->
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 NSP. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

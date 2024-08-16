@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+            <!-- Centered Contact Us Heading -->
+            <h1 class="text-white" style="margin-bottom: 30px;">Contact Us</h1>
+
+            <!-- Social Media Buttons -->
+            <div class="social-section" style="margin-bottom: 40px;">
+                <!-- Facebook -->
+                <div class="contact-button" style="margin-bottom: 10px;">
+                    <a href="https://www.facebook.com/yourprofile" target="_blank">
+                        <button class="btn btn-social" style="background-color: #10A1E9; color: white; width: 300px; padding: 12px; border: none; border-radius: 4px;">
+                            <i class="bi bi-facebook" style="font-size: 20px; margin-right: 10px;"></i> Facebook
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Instagram -->
+                <div class="contact-button" style="margin-bottom: 10px;">
+                    <a href="https://www.instagram.com/yourprofile" target="_blank">
+                        <button class="btn btn-social" style="background-color: #10A1E9; color: white; width: 300px; padding: 12px; border: none; border-radius: 4px;">
+                            <i class="bi bi-instagram" style="font-size: 20px; margin-right: 10px;"></i> Instagram
+                        </button>
+                    </a>
+                </div>
+
+                <!-- TikTok -->
+                <div class="contact-button" style="margin-bottom: 10px;">
+                    <a href="https://www.tiktok.com/@yourprofile" target="_blank">
+                        <button class="btn btn-social" style="background-color: #10A1E9; color: white; width: 300px; padding: 12px; border: none; border-radius: 4px;">
+                            <i class="bi bi-tiktok" style="font-size: 20px; margin-right: 10px;"></i> TikTok
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Gmail -->
+                <div class="contact-button" style="margin-bottom: 10px;">
+                    <a href="mailto:yourmail@example.com">
+                        <button class="btn btn-social" style="background-color: #10A1E9; color: white; width: 300px; padding: 12px; border: none; border-radius: 4px;">
+                            <i class="bi bi-envelope" style="font-size: 20px; margin-right: 10px;"></i> Gmail
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-button" style="margin-bottom: 10px;">
+                    <a href="tel:+(808) 230-9359">
+                        <button class="btn btn-social" style="background-color: #10A1E9; color: white; width: 300px; padding: 12px; border: none; border-radius: 4px;">
+                            <i class="bi bi-telephone" style="font-size: 20px; margin-right: 10px;"></i> Phone
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Bootstrap Icons CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
+<style>
+  .text-white {
+      color: white;
+  }
+</style>
+{% endblock %}
